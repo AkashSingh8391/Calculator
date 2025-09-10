@@ -4,9 +4,11 @@ package com.calculator.controller;
 
 import org.springframework.web.bind.annotation.*;
 
+
+
 @RestController
 @RequestMapping("/api/calculator")
-@CrossOrigin(origins = "*") // allow Flutter frontend
+@CrossOrigin(origins = "*") 
 public class CalculatorController {
 
     @GetMapping("/add")
@@ -29,4 +31,7 @@ public class CalculatorController {
         if (b == 0) throw new ArithmeticException("Division by zero");
         return a / b;
     }
+    
+    
+    
 }
